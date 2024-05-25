@@ -4,27 +4,27 @@
 
 <h3 align="left">The best way to use Selenium in Google Colab Notebooks!</h3>
 
-- Simple setup of Selenium and ChromeDriver.
-- Seamless integration with Google Colab.
-- Supports Undetected ChromeDriver for more advanced use cases.
+- Selenium と ChromeDriver の簡単なセットアップ。
+- Google Colab とのシームレスな統合。
+- より高度なユースケース向けに、検出されない ChromeDriver をサポート。
 <br>
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MX3xY23Go1STe7LbDMvwf2KaqHpbrVhC?usp=sharing)
 
-## Installation  
+## インストール
 
-Basic usage:
+基本版を使用するには:
 ```bash
 %pip install google-colab-selenium
 ```
 
-Use [undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) version:
+[undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) 版を使用するには:
 ```bash
 %pip install google-colab-selenium[undetected]
 ```
 
 
-## Basic Usage
+## 基本版での使い方
 ```python
 import google_colab_selenium as gs
 
@@ -34,7 +34,7 @@ driver = gs.Chrome()
 driver.quit()
 ```
 
-## Undetected ChromeDriver
+## 検出されない ChromeDriver版での使い方
 
 ```python
 import google_colab_selenium as gs
@@ -45,16 +45,16 @@ driver = gs.UndetectedChrome()
 driver.quit()
 ```
 
-## Default Options
+## デフォルト・オプション
 
-The `google-colab-selenium` package is preconfigured with a set of default options optimized for Google Colab environments. These defaults include:
+`google-colab-selenium` パッケージは、Google Colab 環境向けに最適化された一連のデフォルト・オプションで事前構成されています。次のものが含まれます:
 
 - `--headless`: Runs Chrome in headless mode (without a GUI).
 - `--no-sandbox`: Disables the Chrome sandboxing feature, necessary in the Colab environment.
 - `--disable-dev-shm-usage`: Prevents issues with limited shared memory in Docker containers.
 - `--lang=en`: Sets the language to English.
 
-You are welcome to extend or override these options based on your needs:
+必要に応じて、これらのオプションを拡張または上書きすることができます:
 
 ```python
 from selenium.webdriver.chrome.options import Options
@@ -66,14 +66,13 @@ custom_options = Options()
 driver = gs.Chrome(options=custom_options)
 ```
 
-## Contributing
-Contributions are welcome! If you have a suggestion or an issue, please use the issue tracker to let me know.
-
+## 貢献する
+貢献を歓迎します! ご提案や問題がある場合は issue tracker を使用してお知らせください。
 <br>
 <br>
 
 <div align="center">
-<h3>Test it out for yourself!</h3>
+<h3>ぜひご自身でお試しください!</h3>
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MX3xY23Go1STe7LbDMvwf2KaqHpbrVhC?usp=sharing)
 </div>
